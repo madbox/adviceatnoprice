@@ -3,7 +3,7 @@ class Notifier < ActionMailer::Base
   
 
   def simple_advice( advice, sent_at = Time.now)
-    subject    'Бесенный Совет'
+    subject    'Бесценный совет'
     recipients advice.email
     from       "advisor@#{MAIN_DOMAIN}"
     sent_on    sent_at
