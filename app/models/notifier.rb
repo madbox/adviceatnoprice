@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 class Notifier < ActionMailer::Base
   
 
   def simple_advice( advice, sent_at = Time.now)
-    subject    'simple_advice_subject'
+    subject    'Бесенный Совет'
     recipients advice.email
-    from       I18n.t('sender_name')
+    from       "advisor@#{MAIN_DOMAIN}"
     sent_on    sent_at
     
     body       :greeting => 'Hi,'
