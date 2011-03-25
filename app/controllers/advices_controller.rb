@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class AdvicesController < ApplicationController
   # GET /advices
   # GET /advices.xml
@@ -47,7 +48,7 @@ class AdvicesController < ApplicationController
 
     respond_to do |format|
       if @advice.save
-        format.html { redirect_to(@advice, :notice => 'Advice was successfully created.') }
+        format.html { redirect_to(@advice, :notice => 'Совет отправлен.') }
         format.xml  { render :xml => @advice, :status => :created, :location => @advice }
       else
         format.html { render :action => "new" }
